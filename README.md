@@ -1,6 +1,8 @@
-# Anant Suthar — Portfolio
+# Anant Suthar - Cybersecurity Portfolio
 
-> Terminal-aesthetic personal portfolio for a cybersecurity student and full-stack developer.
+**Live Website:** [https://anant-portfolio-mauve.vercel.app/](https://anant-portfolio-mauve.vercel.app/)
+
+A dynamic, terminal-themed personal portfolio built for Anant Suthar, showcasing cybersecurity projects, hackathon achievements, certifications, and experience.
 
 **Live**: [Deploy to Vercel](#deployment)  
 **Stack**: Next.js 14 · TypeScript · Tailwind CSS · Framer Motion · Supabase
