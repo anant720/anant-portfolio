@@ -6,11 +6,11 @@ export const dynamic = 'force-dynamic';
 
 import { cookies } from 'next/headers';
 
-function verifyAdmin(req: NextRequest): boolean {
+async function verifyAdmin(req: NextRequest): Promise<boolean> {
   const adminSecret = process.env.ADMIN_SECRET;
   if (!adminSecret) return false;
 
-  const cookieStore = cookies();
+  const cookieStore = await cookies();
   const authCookie = cookieStore.get('sys_ctrl_auth');
 
   if (authCookie && authCookie.value === adminSecret) {
@@ -21,7 +21,7 @@ function verifyAdmin(req: NextRequest): boolean {
 }
 
 export async function GET(req: NextRequest) {
-  if (!verifyAdmin(req)) {
+  if (!(await verifyAdmin(req))) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 

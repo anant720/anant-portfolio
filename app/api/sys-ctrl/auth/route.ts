@@ -13,7 +13,7 @@ export async function POST(req: NextRequest) {
     }
 
     // Set secure HTTP-only cookie
-    const cookieStore = cookies();
+    const cookieStore = await cookies();
     cookieStore.set('sys_ctrl_auth', secret, {
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production',
@@ -30,7 +30,7 @@ export async function POST(req: NextRequest) {
 
 // Optional Logout
 export async function DELETE() {
-  const cookieStore = cookies();
+  const cookieStore = await cookies();
   cookieStore.delete('sys_ctrl_auth');
   return NextResponse.json({ success: true });
 }
