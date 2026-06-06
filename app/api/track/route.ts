@@ -37,7 +37,6 @@ export async function POST(req: NextRequest) {
     const ip_address =
       req.headers.get('x-forwarded-for')?.split(',')[0] ??
       req.headers.get('x-real-ip') ??
-      req.ip ??
       null;
 
     const supabase = createServiceClient();
