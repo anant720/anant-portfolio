@@ -1,0 +1,9 @@
+# PLACEHOLDER — Replace this file with your actual resume PDF
+# 
+# To add your resume:
+# 1. Export your resume as resume.pdf
+# 2. Place it in the public/ folder as public/resume.pdf
+# 3. The download button in Hero and Contact sections will link to /resume.pdf
+#
+# Alternatively, host it on Supabase Storage and update the 'resume_url' 
+# key in your Supabase config table.
